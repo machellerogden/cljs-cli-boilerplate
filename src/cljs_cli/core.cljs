@@ -2,9 +2,9 @@
   (:require [cljs-cli.promise :as p]
             ["answers" :as answers]))
 
-(defn print-config []
+(defn print-config
+  []
   (-> (answers (clj->js {:name "cljs_cli"}))
-    (p/then #(js->clj %))
-    (p/then
-      (fn [config]
-       (println (pr-str (config)))))))
+      (p/then #(js->clj %))
+      (p/then #(println (pr-str %)))
+      (p/catch #(println (ex-message %)))))
