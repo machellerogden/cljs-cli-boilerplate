@@ -23,6 +23,6 @@
     "ws": "^6.1.2"
   },
   "dependencies": {
-    "answers": "^4.0.0"
+    "answers": "^4.0.1"
   }
 }
