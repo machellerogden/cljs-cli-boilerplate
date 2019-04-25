@@ -2,5 +2,6 @@
  :dependencies []
  :builds {:app {:target :node-script
                 :output-to "dist/main.js"
-                :main architect.main/main!
-                :devtools {:after-load architect.main/reload!}}}}
+                :main cljs-cli.main/main!
+                :devtools {:repl-init-ns cljs-cli.repl
+                           :after-load cljs-cli.repl/reload!}}}}

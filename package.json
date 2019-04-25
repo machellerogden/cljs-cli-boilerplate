@@ -1,19 +1,27 @@
 {
-  "name": "cljs-sandbox",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "name": "cljs-cli",
+  "version": "0.0.0",
+  "description": "some boilerplace for building cljs cli tooling",
+  "bin": {
+    "cljs_cli": "dist/main.js"
+  },
+  "main": "dist/main.js",
   "scripts": {
     "watch": "shadow-cljs watch app",
     "compile": "shadow-cljs compile app",
-    "build": "shadow-cljs release app"
+    "build": "shadow-cljs release app",
+    "repl": "shadow-cljs cljs-repl app",
+    "inspect": "node --inspect"
   },
   "keywords": [],
   "author": "Mac Heller-Ogden",
   "license": "MIT",
   "devDependencies": {
-    "shadow-cljs": "^2.8.25",
+    "shadow-cljs": "^2.8.33",
     "source-map-support": "^0.5.10",
     "ws": "^6.1.2"
+  },
+  "dependencies": {
+    "answers": "^4.0.0"
   }
 }
