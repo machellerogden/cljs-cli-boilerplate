@@ -28,7 +28,7 @@ npm link
 npm run test
 ```
 
-## Watch test (w/ live-reload)
+## Watch tests (w/ live-reload)
 
 ```
 npm run test:watch
