@@ -1,8 +1,12 @@
-{:source-paths ["src"]
+{:source-paths ["src" "test"]
  :dependencies []
- :builds {:app {:target :node-script
-                :output-to "dist/main.js"
-                :main cljs-cli.main/main!}
+ :builds {:test {:target    :node-test
+                 :output-to "test-output/test.js"
+                 :ns-regexp "-test$"
+                 :autorun   true}
+          :app  {:target :node-script
+                 :output-to "dist/main.js"
+                 :main cljs-cli.main/main!}
           :repl {:target :node-script
                  :output-to "dist/repl.js"
                  :main cljs-cli.repl/main!

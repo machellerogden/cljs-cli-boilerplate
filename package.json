@@ -10,7 +10,9 @@
     "build": "shadow-cljs release app",
     "watch": "shadow-cljs watch repl",
     "inspect": "node --inspect ./dist/repl.js",
-    "repl": "shadow-cljs cljs-repl repl"
+    "repl": "shadow-cljs cljs-repl repl",
+    "test": "shadow-cljs compile test",
+    "test:watch": "shadow-cljs watch test"
   },
   "keywords": [],
   "author": "Mac Heller-Ogden",
